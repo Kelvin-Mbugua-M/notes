@@ -1,0 +1,244 @@
+:root{
+    --headerHeight:72px;
+    --fullHeight:100vh;
+    --fullWidth:100vw;
+    --minimums:20px;
+    --nodeMaiHeight:calc(var(--fullHeight) - var(--headerHeight));
+    --textNodeWidth:calc(0.5 * var(--fullWidth) - var(--minimums));
+}
+html,body,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height:var(--fullHeight);
+    width: var(--fullWidth);
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    border: none;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+}
+button:active{
+    transform: scale(0.6);
+    transition: all ease-in-out 300ms;
+}
+.nameOfProgram{
+    height: var(--headerHeight);
+    width: 100vw;
+    padding-left: 10px;
+    background-color: antiquewhite;
+    text-align: left;
+    display: flex;
+}
+.nameOfProgram p{
+    height: 64px;
+    width: 64px;
+    background:url('/icons.images/note.png');
+    align-self: center;
+}
+.nameOfProgram article{
+    margin-left: 10px;
+    color: #E66C0F;
+    font-size: 32pt;
+    align-self: center;
+}
+.nodeMain{
+    height: var(--nodeMaiHeight); 
+    width: var(--fullWidth);
+    display: flex;
+    flex-direction:row-reverse;
+}
+.editGallery{
+    height:var(--nodeMaiHeight);
+    width: calc(0.5* var(--fullWidth));
+    background:#F8BC8C;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.notes{
+    margin-left: 20px;
+    font-weight: bolder;
+    font-size: 20pt;
+    color: #E66C0F;
+    align-self: center;
+}
+.textNode{
+    height: 72px;
+    width: var(--textNodeWidth); 
+    margin: 10px 10px 10px;  
+    background-color:#FDE9D9;
+    display: flex; 
+    align-items: center; 
+    padding-left: 20px;
+    border-radius: 12px;
+    
+}
+.textNodeName{
+    height: 64px;
+    width:calc(0.75 * var(--textNodeWidth)) ;
+    border-radius: 12px;
+    border:solid #FAC99E;
+    outline: none;
+    background:transparent;
+    color: #E66C0F;
+    font-size: 16pt;
+    text-align: left;
+    align-items: center;
+    margin: none;
+    padding: 0 0 0 20px;
+    display:flex;
+}
+.textNodeName:active,.newNote:active{
+    transform: scale(1);
+}
+.textEdit,.textNodeDelete{
+    height: 64px;
+    width: 64px;
+    outline:none;
+    border:none;
+    border-radius: 12px;
+    background: #F38D3F;
+    background-size:48px;
+}
+.textEdit{
+    background: url(/icons.images/editNote.png);
+    background-position: center;
+    background-repeat:no-repeat;
+}
+.textNodeDelete{
+    background: url(/icons.images/delete.png);
+}
+.textNodeDelete:active{
+    background: url(/icons.images/x-button.png);
+    transition: all linear 200ms;
+}
+
+
+
+
+
+
+.editArea{
+    height:var(--nodeMaiHeight);
+    width: calc(0.5* var(--fullWidth));
+    padding-top: 10px;
+    background: #FBD0B1;
+}
+.nameOfNode{
+    height: 64px;
+    width:calc(0.5 * var(--textNodeWidth));
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    background: #000;
+    color:#E66C0F;
+    padding-left: 30px;
+    font-size: 10pt;
+}
+.editableArea{
+    height:calc(0.4 * var(--nodeMaiHeight));
+    width:calc(var(--textNodeWidth));
+    background: #000;
+    margin:10px 10px 10px;
+    position: relative;
+}
+.newNote{
+    height: 64px;
+    width: 256px;
+    margin-left: calc(var(--textNodeWidth)*0.25);
+    margin-top: calc(var(--textNodeWidth)*0.25) ;
+    background: #FCDCC5;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.newNoteText{
+    height: 32px;
+    width: 32px;
+    margin: 0px 20px 0px 10px;
+    background: transparent;
+    background: url('/icons.images/note.png');
+    
+}
+.newNote article{
+    font-size: 16pt;
+    color: #F58A3D;
+    font-weight: bold;
+}
+
+.edit{
+    height: 32px;
+    width: 32px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #E66C0F;
+    background: url('/icons.images/pen.png');
+    background-size:20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.delete{
+    height: 32px;
+    width: 32px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 5px;
+    right: 42px;
+    background-color: aqua;
+    background: url('/icons.images/x-button.png');
+    background-size:20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.textEditContent{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #E66C0F;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+}
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width:5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(255,255,255,0.2);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background:blueviolet; 
+    border-radius: 10px; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #F58A3D;
+  }
