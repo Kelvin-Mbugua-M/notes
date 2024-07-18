@@ -29,7 +29,6 @@ class NodeNotesBlueprint {
             let thisChile = new NodeNotesBlueprint
             thisChile.node_Name_Button.innerHTML = object[i]
             DOM_Parent_Update_Node[0].appendChild(thisChile.node_Notes_Blue_Print)
-            console.log('runnin')
         }
     }
 }
